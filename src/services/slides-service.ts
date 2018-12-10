@@ -23,6 +23,8 @@ const SlideService = () => {
       [key: string]: Array<() => void>;
     },
   };
+  const isSlideSelected = (selectedTags: string[], slide: ISlide) =>
+    slide.tags && slide.tags.reduce((acc, tag) => acc || selectedTags.indexOf(tag) >= 0, false);
 
   return {
     addEventListener: (event: 'ready', callback: () => void) => {
@@ -56,7 +58,10 @@ const SlideService = () => {
       cb.forEach(c => c());
     },
     tags: () => state.selectedTags,
-    slides: () => state.presentation.slides || [],
+    slides: (tags?: string[]) => tags && state.presentation.slides
+      ? state.presentation.slides.filter(s => isSlideSelected(tags, s))
+      : (state.presentation.slides || []),
+    // state.presentation.slides || [],
   };
 };
 

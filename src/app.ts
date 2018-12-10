@@ -14,6 +14,9 @@ const routingTable: RouteDefs = {
   '/slides': {
     render: () => m(SlidesViewer),
   },
+  '/slides?...': {
+    render: () => m(SlidesViewer),
+  },
 };
 
 m.route(document.body, '/', routingTable);

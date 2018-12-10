@@ -50,16 +50,13 @@ slides:
       - intro
       - police
       - C2
-      - smart city
     content: >
       ## Safety &amp; Security Applications
       ![](content/img/MIB.jpg)
   -
     id: secure haven 1
     tags:
-      - smart city
       - secure haven
-      - C2
     title: >
       ## Innovative Urban Planning
     left: >

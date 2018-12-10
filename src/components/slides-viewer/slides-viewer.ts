@@ -45,6 +45,7 @@ export const SlidesViewer = () => {
   return {
     oninit: () => {
       SlideSvc.addEventListener('ready', () => m.redraw());
+      console.warn('init');
       SlideSvc.init();
       const link = document.createElement('link');
       link.rel = 'stylesheet';
@@ -54,7 +55,12 @@ export const SlidesViewer = () => {
     },
     oncreate: () => initReveal(),
     view: () => {
-      return m('.reveal', m('.slides', SlideSvc.slides().map(slide => m(MarkdownSlide, slide))));
+      const url = m.route.get();
+      const query = url.split('?')[1];
+      const tags = query ? m.parseQueryString('?' + query).tags : undefined;
+      const selectedTags = tags ? tags.split(',') : undefined;
+      console.warn(selectedTags);
+      return m('.reveal', m('.slides', SlideSvc.slides(selectedTags).map(slide => m(MarkdownSlide, slide))));
     },
   } as Component;
 };
