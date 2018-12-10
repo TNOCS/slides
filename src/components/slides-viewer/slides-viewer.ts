@@ -52,7 +52,7 @@ export const SlidesViewer = () => {
       link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
       document.getElementsByTagName('head')[0].appendChild(link);
     },
-    onupdate: () => initReveal(),
+    oncreate: () => initReveal(),
     view: () => {
       return m('.reveal', m('.slides', SlideSvc.slides().map(slide => m(MarkdownSlide, slide))));
     },
