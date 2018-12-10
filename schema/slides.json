@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "IBaseSlide": {
+            "properties": {
+                "content": {
+                    "description": "Markdown content, representing the slide:",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Slide ID, so we can refer to it.",
+                    "type": "string"
+                },
+                "layout": {
+                    "default": "'default'",
+                    "description": "Slide layout. When using '2col', please specify the title, left and right property.",
+                    "enum": [
+                        "2col",
+                        "default"
+                    ],
+                    "type": "string"
+                },
+                "left": {
+                    "description": "Markdown content, representing the left half of the slide:",
+                    "type": "string"
+                },
+                "note": {
+                    "description": "Optional speaker notes, may also be generated using 'Note: xxx' in the markdown content",
+                    "type": "string"
+                },
+                "right": {
+                    "description": "Markdown content, representing the right half of the slide:",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Optional title, to be inserted before the content",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ISlide": {
+            "properties": {
+                "content": {
+                    "description": "Markdown content, representing the slide:",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Slide ID, so we can refer to it.",
+                    "type": "string"
+                },
+                "layout": {
+                    "default": "'default'",
+                    "description": "Slide layout. When using '2col', please specify the title, left and right property.",
+                    "enum": [
+                        "2col",
+                        "default"
+                    ],
+                    "type": "string"
+                },
+                "left": {
+                    "description": "Markdown content, representing the left half of the slide:",
+                    "type": "string"
+                },
+                "month": {
+                    "description": "Month of publication",
+                    "type": "number"
+                },
+                "note": {
+                    "description": "Optional speaker notes, may also be generated using 'Note: xxx' in the markdown content",
+                    "type": "string"
+                },
+                "right": {
+                    "description": "Markdown content, representing the right half of the slide:",
+                    "type": "string"
+                },
+                "slides": {
+                    "description": "Creates a vertical slide",
+                    "items": {
+                        "$ref": "#/definitions/IBaseSlide"
+                    },
+                    "type": "array"
+                },
+                "tags": {
+                    "description": "Slide tags, for filtering too.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "title": {
+                    "description": "Optional title, to be inserted before the content",
+                    "type": "string"
+                },
+                "year": {
+                    "description": "Year of publication",
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "slides": {
+            "items": {
+                "$ref": "#/definitions/ISlide"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+

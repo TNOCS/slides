@@ -1,0 +1,54 @@
+{
+  "name": "mithril-typescript-webpack",
+  "sideEffects": [
+    "*.css"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "description": "A Mithril starter kit using TypeScript and WebPack.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config scripts/webpack.dev.js",
+    "build": "webpack --env prod --optimize-minimize --config scripts/webpack.prod.js",
+    "gen:schema": "typescript-json-schema.cmd tsconfig.json IPresentation > ./schema/slides.json"
+  },
+  "keywords": [
+    "mithril",
+    "typescript",
+    "webpack"
+  ],
+  "author": "Erik Vullings <erik.vullings@gmail.com> (http://www.tno.nl)",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "3.12.0",
+    "marked": "^0.5.2",
+    "materialize-css": "^1.0.0",
+    "mithril": "^2.0.0-rc.3",
+    "mithril-materialized": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^3.11.2",
+    "@types/marked": "^0.4.2",
+    "@types/materialize-css": "^1.0.5",
+    "@types/mithril": "^1.1.13",
+    "autoprefixer": "^9.4.2",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.0.0",
+    "cssnano": "^4.1.7",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.4.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.1.0",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.2.2",
+    "typescript-json-schema": "^0.33.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  }
+}

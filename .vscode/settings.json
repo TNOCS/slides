@@ -1,0 +1,12 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/*.slides.json"],
+      "url": "./schema/slides.json"
+    }
+  ],
+  "yaml.schemas": {
+    "./schema/slides.json": "/*.slides.yaml",
+    "url": "./schema/slides.json"
+  }
+}
