@@ -37,7 +37,9 @@ const SlideService = () => {
       }
       state.isLoading = true;
       state.hasLoaded = false;
-      const url = DEVMODE ? 'content/cs.slides.yaml' : 'TODO: point to github raw';
+      const url = DEVMODE
+        ? 'content/cs.slides.yaml'
+        : 'https://raw.githubusercontent.com/TNOCS/slides/master/content/cs.slides.yaml';
       state.presentation = await m.request<IPresentation>(url, { deserialize: yaml.safeLoad });
       const { slides } = state.presentation;
       state.tags = slides

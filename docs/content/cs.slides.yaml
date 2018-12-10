@@ -1,0 +1,178 @@
+slides:
+  -
+    id: cs title
+    tags:
+      - cs
+      - intro
+    content: >
+      # The Common Sense Framework
+
+      <br>
+
+      ### The world at your fingertips
+
+      <br>
+
+      [Arnoud de Jong](http://nl.linkedin.com/pub/arnoud-de-jong/0/53a/bb3) & [Erik Vullings](https://www.linkedin.com/in/erikvullings)
+  -
+    id: introduction
+    tags:
+      - cs
+      - intro
+    content: >
+      <h2>Introduction</h2>
+      <ul>
+        <li>Goal
+          <blockquote>
+            “Simple and natural disclosure of information and sensor data to support decision making”
+          </blockquote>
+        </li>
+        <li>What we have
+          <blockquote>
+            “A collection of reusable tools and components for interaction with information, multi-site collaboration and analysis.”
+          </blockquote>
+        </li>
+      </ul>
+      <aside class="notes">
+        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+      </aside>
+  -
+    id: devices
+    tags:
+      - intro
+    content: >
+      ## Popular Devices
+
+      ![](content/img/TouchDevices.png)
+  -
+    id: intro safety and security
+    tags:
+      - intro
+      - police
+      - C2
+      - smart city
+    content: >
+      ## Safety &amp; Security Applications
+      ![](content/img/MIB.jpg)
+  -
+    id: secure haven 1
+    tags:
+      - smart city
+      - secure haven
+      - C2
+    title: >
+      ## Innovative Urban Planning
+    left: >
+      ![](content/img/ShowcaseVeiligNederland1.jpg)
+    right: >
+      - **Customer:** City of The Hague
+
+      - **Goal:** Enable domain experts to quickly and collaboratively create a master and safety plan for the city.
+
+      - Experts estimate impact of plans and measures on the city collaboratively based on:
+        - Quality of life
+        - Economics
+        - Safety &amp; Security
+        - Costs
+
+      - Combine selected plans &amp; measures to form initial urban development plans
+    slides:
+      -
+        id: details
+        left: >
+          ![Showcase Veilig Nederland](content/img/ShowcaseVeiligNederland2.png)
+          <br>
+          Domain experts collaboratively specify the effects of a potential plan on the area.
+        right: >
+          Drag plans (shown in the wheel) to a cluster on the map.
+
+          The dialog box instantly shows the effect on the criteria based on the expert model.
+
+          ![](content/img/ShowcaseVeiligNederland3.png)
+  -
+    id: iTable
+    tags:
+      - C2
+      - Police
+    title: >
+      ## iTable
+    left: >
+      ![](content/img/iTable1.jpg)
+      ![](content/img/iTable2 - Bomb.png)
+    right: >
+      - **Customer:** National Police (DKDB = Service for Protecting People)
+
+      - **Goal:** Increase the quality and effectiveness of security briefings
+
+        - Show location in Google Earth or StreetView
+        - Analyse field-of-view at position
+        - Mark (and collaboratively share) map with points of interest
+    slides:
+      -
+        id: Google Earth
+        content: >
+          ## Combine top view with 3D view in Google Earth
+
+          ![](content/img/iTable3 - 3D coupling.png)
+      -
+        id: Traffic cameras
+        content: >
+          ## Access traffic cameras
+
+          ![](content/img/iTable4 - Traffic cameras.png)
+      -
+        id: CBS
+        content: >
+          ## Combine 3D information with CBS statistics
+
+          ![](content/img/iTable6 - Area with CBS statistics.png)
+      -
+        id: AR
+        title: >
+          ## Augmented Reality for 3D Situational Awareness
+
+          By adding AR markers to the map, we can also inspect the situation in 3D
+        left: >
+          ![](content/img/AR1 - Flight.png)
+          <br>
+          [Real-time flight tracker service](http://www.youtube.com/watch?v=bsiHB8AxpqQ&feature=youtu.be)
+        right: >
+          ![](content/img/AR2 - Arena.png)
+          <br>
+          [Amsterdam arena](http://www.youtube.com/watch?v=zhnKipiUCJQ&feature=youtu.be)
+  -
+    id: TouchMii
+    tags:
+      - C2
+      - Defence
+    title: >
+      ## TouchMii - Combining operations &amp; simulation
+    left: >
+      ![](content/img/TouchMii - VBS2 units on map.png)
+      ![](content/img/TouchMii - Exchange information with 2nd line.png)
+    right: >
+      - **Customer:** Command and Control (C2) birdtable, Ministry of Defence
+
+      - **Goal:** Increase the quality of strategic and tactical decisions
+
+      - **Features:**
+
+        - Interfaces with VBS2, the serious game used for training, to show the units on a map.
+        - Decision support for commanders
+        - Facilitates interaction with the second line
+        - Youtube [link 1](http://youtu.be/Ix2vhcecapo) and [link 2](http://www.youtube.com/watch?v=O9H1f0FcHNs)
+    slides:
+      -
+        id: COA
+        content: >
+          ## Course of Action support: Weigh alternatives
+
+          ![](content/img/TouchMii - Decision Support.png)
+      -
+        id: SA
+        title: >
+          ## Situational Awareness in VBS2
+        left: >
+          ![](content/img/TouchMii - SA2.png)
+        right: >
+          ![](content/img/TouchMii - SA1.png)

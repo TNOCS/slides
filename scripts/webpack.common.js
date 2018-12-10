@@ -6,16 +6,16 @@ const webpack = require('webpack'); //to access built-in plugins
 
 //new webpack.HotModuleReplacementPlugin()
 const title = 'Slides';
+const outputPath = '../docs';
 
 module.exports = {
   mode: 'production',
   entry: {
     app: './src/app.ts',
-    // print: './src/print.js'
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, outputPath),
   },
   module: {
     rules: [
@@ -70,7 +70,7 @@ module.exports = {
       },
       { from: 'content', to: 'content' }
     ]),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin([outputPath]),
     new HtmlWebpackPlugin({ title: title, favicon: 'src/assets/favicon.ico' }),
   ],
 };
