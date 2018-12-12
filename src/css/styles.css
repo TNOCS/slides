@@ -16,6 +16,8 @@ body {
 
 .main {
   margin: 20px;
+  overflow-y: auto;
+  height: 90vh;
 }
 
 .black-theme {

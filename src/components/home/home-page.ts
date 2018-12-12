@@ -1,6 +1,6 @@
 import m, { Component } from 'mithril';
 import { SlideSvc } from '../../services/slides-service';
-import { Options, IInputOption } from 'mithril-materialized';
+import { Options, IInputOption, FlatButton } from 'mithril-materialized';
 
 export const HomePage = () => {
   const state = {
@@ -28,8 +28,12 @@ export const HomePage = () => {
         m('.col.s12.m6', [
           m('h3', 'What do you want to see?'),
           m(`a[href=${href}]`, { oncreate: m.route.link }, 'Go to slides...'),
-          m('p', 'Select the slides using the tags, year or otherwise.'),
+          m('p', 'Select the slides you want to show using the tags:'),
           m(Options, { label: 'Select the tags to show', options: state.tags, onchange }),
+          m(FlatButton, {
+            label: 'Clear all tags',
+            ui: { onclick: () => state.tags.forEach(t => (t.isChecked = false)) },
+          }),
         ]),
         m('.col.s12.m6', [
           m('h4', 'Selected slides'),
@@ -37,9 +41,14 @@ export const HomePage = () => {
             'ul.collection',
             slides.map(slide =>
               m('li.collection-item', [
-                m('span.title', slide.title || slide.id),
+                m('span.title', (slide.id || '').replace(/#/g, '')),
                 slide.slides
-                  ? m('ul', slide.slides.map(child => m('li', '- ' + (child.title || child.id || child.content))))
+                  ? m(
+                      'ul',
+                      slide.slides.map(child =>
+                        m('li', '- ' + (child.id || child.title || child.content).replace(/#/g, ''))
+                      )
+                    )
                   : undefined,
               ])
             )

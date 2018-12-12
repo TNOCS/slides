@@ -17,6 +17,6 @@ export const Layout = () =>
             m('ul.right'),
           ])
         ),
-        m('.row.main', vnode.children),
+        m('.main', m('.row', vnode.children)),
       ]),
   } as Component<{ theme: string }>);
