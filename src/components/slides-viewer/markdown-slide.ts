@@ -18,13 +18,13 @@ export const MarkdownSlide = (): Component<ISlide> => {
     const slideToHtml = (slide: ISlide | IBaseSlide) => {
       const { content, left, right, title, layout } = slide;
       return content || layout === 'default'
-        ? content
+        ? markdown(content)
         : columnsToHTML(title, left, right);
     };
     return {
       view: ({ attrs: slide }) => {
         const slides = (slide as ISlide).slides || [];
-        const verticalSlides = slides.map(s => '\n\n' + slideToHtml(s)).join('');
+        const verticalSlides = '\n\n' + slides.map(s => slideToHtml(s)).join('\n\n');
         return m('textarea[data-template]', slideToHtml(slide) + verticalSlides);
       },
     } as Component<ISlide>;

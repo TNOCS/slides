@@ -54,6 +54,7 @@ const SlideService = () => {
       );
       state.isLoading = false;
       state.hasLoaded = true;
+      console.log(`${slides.length} slides loaded...`);
       const cb = state.callbacks.ready || [];
       cb.forEach(c => c());
     },

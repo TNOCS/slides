@@ -3,7 +3,6 @@ slides:
     id: cs title
     tags:
       - cs
-      - intro
     content: >
       # The Common Sense Framework
 
@@ -15,10 +14,16 @@ slides:
 
       [Arnoud de Jong](http://nl.linkedin.com/pub/arnoud-de-jong/0/53a/bb3) & [Erik Vullings](https://www.linkedin.com/in/erikvullings)
   -
+    id: opening c2
+    tags:
+      - simcen
+    content: >
+      ![](content/img/c2-to-battlelabs.png)
+  -
     id: introduction
     tags:
       - cs
-      - intro
+      - simcen
     content: >
       <h2>Introduction</h2>
       <ul>
@@ -39,7 +44,8 @@ slides:
   -
     id: devices
     tags:
-      - intro
+      - cs
+      - simcen
     content: >
       ## Popular Devices
 
@@ -47,15 +53,15 @@ slides:
   -
     id: intro safety and security
     tags:
-      - intro
-      - police
-      - C2
+      - cs
+      - simcen
     content: >
       ## Safety &amp; Security Applications
       ![](content/img/MIB.jpg)
   -
     id: secure haven 1
     tags:
+      - cs
       - secure haven
     title: >
       ## Innovative Urban Planning
@@ -89,8 +95,8 @@ slides:
   -
     id: iTable
     tags:
-      - C2
-      - Police
+      - simcen
+      - cs
     title: >
       ## iTable
     left: >
@@ -137,11 +143,42 @@ slides:
           ![](content/img/AR2 - Arena.png)
           <br>
           [Amsterdam arena](http://www.youtube.com/watch?v=zhnKipiUCJQ&feature=youtu.be)
+      -
+        id: RealityCheck
+        content: >
+          ## The Reality Check: Real-time Evacuation Model
+
+          ![](content/img/RealityCheck1.jpg)
+          ![](content/img/RealityCheck2.jpg)
+          <br>
+          - Increased situation awareness during a crisis
+          - Uses ThePopulator&trade; for population data
+      -
+        id: CareTool
+        content: >
+          ## CareTool
+
+          - **Customer:** Ministry of Health (VWS)
+
+          - **Goal:** Gain insight in the position of health care facilities and health regions
+
+
+          ![](content/img/CareTool.png)
+      - 
+        id: logistics
+        title: >
+          ## Logistic Planning
+        left: >
+          - **Customer:** Commercial logistic company
+
+          - **Goal:** Develop an intuitive dashboard for planning ship allocation
+        right: >
+          ![](content/img/LogisticsPlanning.png)
   -
     id: TouchMii
     tags:
-      - C2
-      - Defence
+      - cs
+      - simcen
     title: >
       ## TouchMii - Combining operations &amp; simulation
     left: >
@@ -173,3 +210,280 @@ slides:
           ![](content/img/TouchMii - SA2.png)
         right: >
           ![](content/img/TouchMii - SA1.png)
+      -
+        id: sparqs
+        tags:
+          - collaboration
+          - Defence
+        title: >
+          ## SPARQS
+
+          Sensor Planning, Allocation of Resources and Quality of Service
+        left: >
+          - **Customer:** [STARS project](http://www.starsproject.nl)
+
+          - **Goal:** A tool for sensor planning: drag-’n-drop sensors, configure them,
+            analyse field of view. Is used to establish roadmap using CDAG (Concept Development
+            Assessment Game): determine most important sensor features.
+
+          ![](content/img/SPARQS - SAIL2015.png)
+        right: >
+          ![](content/img/SPARQS - Neercannes.png)
+
+          - Using Resource Allocation Algorithms (Matlab).
+      -
+        id: msa
+        tags:
+          - Defence
+          - maritime
+        title: >
+          ## Maritime Situational Awareness
+        right: >
+          - **Customer:** Ministery of Defence (Royal Navy)
+
+          - **Goal:** By simulating pirates and regular sea traffic, find the best
+          course of action to catch pirates, smugglers &amp; illegal fishers.
+        left: >
+          ![](content/img/MSA.png)
+      -
+        id: cs4defence
+        content: >
+          ## Commons Sense - for Defence
+
+          - **Customer:** Ministery of Defence
+
+          - **Goal:** Developing an integrated C4I demonstrator consisting of:
+
+            - a smartphone application for dismounted soldiers
+            - a command post application on a multi-touch table, tablet or smartphone
+            - Features include blue force tracking, drawing, changing and sending waypoints, marking areas or points of interest, (push-to-talk) speech, voice messages, chat, sensing photos, event logging, task lists and context-dependent information transfer
+
+          <div class="columns">
+            <div class="col">![](content/img/C4I3.jpg)</div>
+            <div class="col">![](content/img/C4I2.jpg)</div>
+            <div class="col">![](content/img/C4I1.jpg)</div>
+          </div>
+      -
+        id: safeme
+        tags:
+          - Defence
+          - civil
+          - maritime
+        title: >
+          ## SafeMe
+        right: >
+          - Tool to compare the risk reducing effects of safety measures.
+
+          - Uses open source data (CBS, BAG, risicokaart.nl) with different computational models to compute effects of risk reducing measures.
+        left: >
+          ![](content/img/SafeMe.png)
+  -
+    id: disaster and sensor mgmt
+    tags:
+      - cs
+    content: >
+      ## Disasters Happen
+
+      About UrbanFlood, ieNAT, and EIT WaterNet
+      <br>
+      ![](content/img/disasters-happen.jpg)
+    slides:
+      -
+        id: UrbanFlood
+        title: >
+          ## UrbanFlood
+        left: >
+          - **Customer:** Framework Program 7
+
+          - **Goal:** Develop a Surface platform for sensor management during
+            daily operations, but also during flooding.
+        right: >
+          ![](content/img/Urban Flood 1.png)
+          ![](content/img/Urban Flood 2.png)
+      -
+        id: ieNAT
+        title: >
+          ## ieNat
+        right: >
+          - Provide a virtual infrastructure to large scale electric grids
+
+          - Enables Energy Services by collecting and analysing data from the physical Infrastructure
+
+          - Matlab back-end with load flow solver, State estimation, Data aggregation &amp; sensor placement algorithms
+        left: >
+          ![](content/img/ieNat1.png)
+          ![](content/img/ieNat2.png)
+      -
+        id: EIT Waternet
+        title: >
+          ## EIT Waternet
+        left: >
+          - Full Water Cycle demonstration
+
+          - 3D animations for explanations
+
+          - Real-life data for investigations (vessel tracking, dike monitoring, waterway sensors, bridges, sewers, etc.)
+          <br>
+          ![](content/img/Waternet4.png)
+        right: >
+          ![](content/img/Waternet1.png)
+          ![](content/img/Waternet2.png)
+          ![](content/img/Waternet3.png)
+  -
+    id: aanpasbaarheid woningen
+    tags:
+      - cs web
+    content: >
+      ![](content/img/zorg-op-de-kaart-aanpasbaarheid-woningen.png)
+    slides:
+      -
+        id: map
+        content: >
+          ![](content/img/zorg-op-de-kaart-aanpasbaarheid-woningen2.png)
+  -
+    id: city dashboard Rotterdam
+    tags:
+      - cs web
+    content: >
+      ![](content/img/city-dashboard-rotterdam.png)
+  -
+    id: sgbo the life i live
+    tags:
+      - cs web
+    content: >
+      ![](content/img/sgbo-haaglanden-the-life-i-live.png)
+  -
+    id: geo4oov
+    tags:
+      - cs web
+      - simcen
+    content: >
+      ![](content/img/geo4oov.png)
+    slides:
+      -
+        id: haaglanden
+        content: >
+          ![](content/img/geo4oov2.png)
+      -
+        id: pn2016
+          - simcen
+        content: >
+          ![](content/img/pn2016.png)
+      -
+        id: chain-effects
+        content: >
+          <iframe src="https://player.vimeo.com/video/173350066" width="1980" height="1020" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      -
+        id: worldexplorer
+        content:
+          <iframe src="https://player.vimeo.com/video/253818533" width="1980" height="1020" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  -
+    id: driver+
+    tags:
+      - driver+
+      - CD&E
+    content: >
+      ## DRIVER+ (EU FP7)
+
+      - **Customer:** EU FP7
+
+      - **Goal:** CD&E environment for Crisis Management, where you can test new functionality and train
+      your staff.
+
+      ![](content/img/driver+.png)
+    slides:
+      -
+        id: diagram
+        content: >
+          ![](content/img/test-bed1.png)
+      -
+        id: video for CM experts
+        content: >
+          <iframe src="https://player.vimeo.com/video/299680658" width="1980" height="1020" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      -
+        id: video for developers
+        content: >
+          <iframe src="https://player.vimeo.com/video/299681354" width="1980" height="1020" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  -
+    id: lwc
+    tags:
+      - lwc
+      - simcen
+    content: >
+      ## Modern Urban Warfare (2019)
+
+      ![](content/img/lwc1.png)
+    slides:
+      -
+        id: details
+        left: >
+          ![](content/img/lwc2.png)
+        right: >
+          - **Customer:** Ministery of Defence
+
+          - **Goal:** Experience and experiment (CD&E)
+            - The contribution of cyber analysts during a mission
+            - Social media operators
+            - C2 information
+            - Sensor data
+            - Unmanned aerial/ground vehicles
+  -
+    id: closing Erik
+    tags:
+      - simcen
+    content: >
+      ![](content/img/closing-erik.png)
+  -
+    id: tools
+    tags:
+      - tools
+    content: >
+      ## Multi-Purpose Analysis Features
+
+      ![](content/img/Fractal.png)
+    slides:
+      -
+        id: Marvel
+        tags:
+          - collaboration
+          - Defence
+        title: >
+          ## Marvel
+        left: >
+          - **Customer:** Ministry of Defence, Olympics, Health, ...
+
+          - **Goal:** Develop Expert Models together with clients to estimate the effect of decisions.
+
+          - Based on casual loop diagrams, determine the strength of relations, sign and time delay
+            between different domain concepts to determine the most appropriate course of action.
+        right: >
+          ![](content/img/Marvel.png)
+      -
+        id: The Missing Link
+        tags:
+          - collaboration
+          - Defence
+        title: >
+          ## The Missing Link
+        left: >
+          - **Customer:** Ministry of Defence
+
+          - **Goal:** Web application aimed to decrease the gap between operational needs
+          (scenarios) and potential solutions (ideas of systems).
+        right: >
+          ![](content/img/TheMissingLink.png)
+      -
+        id: TNOPresenter
+        tags:
+          - communication
+        title: >
+          ## TnoPresenter
+        right: >
+          - **Customer:** TNO Market &amp; Communications dept.
+
+          - **Goal:** Present TNO’s knowledge, product and project portfolio in an interactive way.
+
+          - A multimedia presentation tool to interactively show content.
+        left: >
+          ![](content/img/TnoPresenter1.jpg)
+          ![](content/img/TnoPresenter2.jpg)
