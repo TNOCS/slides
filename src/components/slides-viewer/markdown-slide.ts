@@ -17,14 +17,12 @@ export const MarkdownSlide = (): Component<ISlide> => {
         : '';
     const slideToHtml = (slide: ISlide | IBaseSlide) => {
       const { content, left, right, title, layout } = slide;
-      return content || layout === 'default'
-        ? markdown(content)
-        : columnsToHTML(title, left, right);
+      return content || layout === 'default' ? markdown(content) : columnsToHTML(title, left, right);
     };
     return {
       view: ({ attrs: slide }) => {
-        const slides = (slide as ISlide).slides || [];
-        const verticalSlides = '\n\n' + slides.map(s => slideToHtml(s)).join('\n\n');
+        const slides = (slide as ISlide).slides;
+        const verticalSlides = slides && slides.length > 0 ? '\n\n' + slides.map(s => slideToHtml(s)).join('\n\n') : '';
         return m('textarea[data-template]', slideToHtml(slide) + verticalSlides);
       },
     } as Component<ISlide>;
